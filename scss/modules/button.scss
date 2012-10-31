@@ -1,0 +1,40 @@
+// ============================================
+// Button
+// ============================================
+
+.btn {
+  display: inline-block;
+  font-size: .9em;
+  text-decoration: none;
+  background: transparent;
+  @include gradient($appPrimaryDark, $appPrimaryLight);
+  color: #fff;
+  border: 1px solid $appPrimaryDark;
+  padding: 5px 10px;
+  @include addPrefix(border-radius, $btnRadius);
+  //@include addPrefix(box-shadow, 0 2px 1px rgba(0,0,0,0.3));
+
+  &:hover, &.active {
+    color: #fff;
+    border: 1px solid $appPrimaryLight;
+    @include gradient($appPrimaryLight, $appPrimary);
+  }
+}
+
+.btn-secondary {
+  @include gradient($appSecondaryDark, $appSecondary);
+  border: 1px solid $appSecondaryDark;
+
+  &:hover, &.active {
+    border: 1px solid $appSecondary;
+    @include gradient($appSecondary, $appSecondary);
+  }
+}
+
+.btn-small {
+    font-size: .75em;
+}
+
+.btn-large {
+  font-size: 1.25em;
+}

@@ -1,0 +1,50 @@
+// ============================================
+// Mixins
+// ============================================
+
+@mixin applyClearfix() {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin addPrefix($prop, $value) {
+
+  -webkit-#{$prop} : $value;
+  -moz-#{$prop} : $value;
+  -ms-#{$prop} : $value;
+  -o-#{$prop} : $value;
+  #{$prop} : $value;
+
+}
+
+@mixin gradient($stop, $start) {
+
+  background-color: mix($start, $stop);
+  background-image: linear-gradient(top, $start 0%, $stop 100%);
+  background-image: -o-linear-gradient(top, $start 0%, $stop 100%);
+  background-image: -moz-linear-gradient(top, $start 0%, $stop 100%);
+  //background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, $start), color-stop(1, $stop));
+  background-image: -webkit-linear-gradient(top, $start 0%, $stop 100%);
+  background-image: -ms-linear-gradient(top, $start 0%, $stop 100%);
+  
+}
+
+@mixin inlineblock() {
+  display: inline-block;
+  zoom: 1; *display: inline;
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes $name { @content; }
+  @-moz-keyframes $name { @content; }
+  @-ms-keyframes $name { @content; }
+  @keyframes $name { @content; }
+}

@@ -1,0 +1,20 @@
+// ============================================
+// Helpers
+// ============================================
+
+.clear { clear:both; }
+.clear-left { clear:left; }
+.clear-right {clear:right; }
+.clearfix { @include applyClearfix(); }
+
+.pull-left { float: left;}
+.pull-right {float: right;}
+
+.unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+.affix {
+  position: fixed;
+}

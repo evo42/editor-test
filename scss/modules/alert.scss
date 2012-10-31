@@ -1,0 +1,29 @@
+// ============================================
+// Alert
+// ============================================
+
+.alert {
+  margin: 15px 0;
+  border: 1px solid $appSecondary;
+  background: $appSecondaryLight;
+  color: $appSecondary;
+  font-size: .9em;
+  @include addPrefix(border-radius, $btnRadius);
+  padding: 5px 10px;
+
+  .close {
+    float: right;
+    font-size: 1.2em;
+    vertical-align: middle;
+    margin-top: -3px;
+    cursor: pointer;
+  }
+}
+
+.alert-error {
+  color: $appPrimaryDark;
+  border-color: $appPrimaryDark;
+  background: #f8cdb2;
+
+  .close { color: $appPrimaryDark; }
+}

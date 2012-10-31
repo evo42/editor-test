@@ -1,0 +1,21 @@
+// ============================================
+// Logo
+// ============================================
+
+.logo {
+  display: block;
+  height: 100px;
+  width: 200px;
+  text-indent: -9999px;
+  margin-top: 35px;
+  background: url(../img/logo.png);
+
+}
+
+.logo-large {
+  height: 300px;
+  width: 600px;
+  margin: 60px auto;
+  background: url(../img/logo-large.png);
+  @include addPrefix(animation, fadeIn 2s);
+}

@@ -1,0 +1,71 @@
+// ============================================
+// Layout
+// ============================================
+
+* { @include addPrefix(box-sizing, border-box); }
+
+.row {
+  @include applyClearfix();
+  margin-left: -1 * $gutter;
+  width: $pageWidth - $gutter;
+  position: relative;
+}
+
+//for showing grid only
+.row-test [class^="span"] {
+  height: 20px;
+  margin-bottom: 10px;
+  background: $appPrimary;
+}
+
+[class^="span"] {
+  float: left;
+  display: block;
+  margin-left: $gutter;
+  min-height: 1px;
+}
+
+//generate layout classes
+@for $i from 1 through $columns {
+
+    .span#{$i}  { 
+      width: ($columnWidth * $i) + ($gutter * ($i - 1));
+    }
+    .offset#{$i} { margin-left: ($columnWidth * $i) + ($gutter * ($i + 1));}
+}
+
+.wrapper, 
+.container {
+  width: $pageWidth;
+  padding: $gutter;
+  margin: 0 auto;
+}
+
+
+// ============================================
+// High Level Areas
+// ============================================
+
+header,
+.content,
+footer {
+  @include applyClearfix();
+}
+
+//header
+
+header {
+ height: 100px;
+}
+
+//content
+
+.content {
+
+}
+
+//footer
+
+footer {
+
+}

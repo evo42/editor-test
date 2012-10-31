@@ -1,0 +1,39 @@
+// ============================================
+// Variables
+// ============================================
+
+$columns: 12;
+$columnWidth: 60px; // 6.383%;
+$gutter: 20px; //2.127%;
+
+$pageWidth : $columns * $columnWidth + ($columns + 1) * $gutter; //980px;
+
+$baseFont: Helvetica, Arial, sans-serif;
+$brandFont: Helvetica, Arial, sans-serif ;
+
+$btnRadius: 3px;
+
+//Primary
+$appPrimary: #464446;
+$appPrimaryLight: lighten($appPrimary, 20);
+$appPrimaryDark: darken($appPrimary, 20);
+
+//Secondary
+$appSecondary: #55a8d7;
+$appSecondaryLight: lighten($appSecondary, 20);
+$appSecondaryDark: darken($appSecondary, 20);
+
+$appSecondaryText: #002157;
+
+//Tertiary
+$appTertiary: #EEE;
+$appTertiaryLight: lighten($appTertiary, 20);
+
+
+//Quaternary
+$appQuaternary: #aaaaaa;
+$appQuaternaryLight: #f8f8f8;
+$appQuaternaryDark: #363636;
+
+$appQuaternaryText: #7f7f7f;
+

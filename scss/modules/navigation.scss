@@ -1,0 +1,98 @@
+// ============================================
+// Navigation
+// ============================================
+
+.nav {
+  @extend .unstyled;
+  margin: 0;
+
+  li {
+    display: inline-block;
+    padding: 5px 0px 5px 10px;
+
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+}
+
+.nav-list {
+
+  border: 1px solid $appTertiary;
+  border-radius: $btnRadius;
+
+  li {
+    display: block;
+    padding: 0;
+    border-bottom: 1px solid $appTertiary;
+
+    a {
+      display: block;
+      padding: 5px 10px;
+      text-decoration: none;
+
+
+      &:hover {
+        background: $appTertiary;
+      }
+    }
+
+    &:last-child {
+        border-bottom: 0;
+    }
+  }
+
+  li.active {
+    a {
+      color: white;
+      background: $appSecondary;
+    }
+  }
+
+}
+
+.nav-main {
+  font-family: $brandFont;
+  font-size: 1.5em;
+  font-weight: normal;
+  margin-left: 20px;
+
+  li {
+    padding-left: 20px;
+
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $appSecondary;
+
+    &.active {
+      color: $appPrimary;
+      position: relative;
+    }
+  }
+}
+
+.nav-footer {
+
+  float: right;
+  margin-top: -5px;
+
+  a {
+    color: $appSecondary;
+    border-left: 1px solid $appSecondary;
+    padding-left: 8px;
+    margin-left: -4px;
+  }
+
+  li:first-child a {
+      border-left: 0;
+  }
+}
+
+.nav-fixed {
+  width: 250px;
+}

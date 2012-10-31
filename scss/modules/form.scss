@@ -1,0 +1,41 @@
+// ============================================
+// Form
+// ============================================
+
+form {
+  .actions {
+    padding: 15px 0;
+  }
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+  color: $appTertiary;
+}
+
+input, textarea, select {
+  color: $appQuaternaryText;
+  padding: 5px;
+  border: 1px solid $appTertiary;
+  @include gradient(#fff, $appQuaternaryLight); //needs adjustment
+}
+
+input[class*="span"],
+select[class*="span"],
+textarea[class*="span"] {
+  float: none;
+  margin-left: 0;
+}
+
+.form-login {
+  background: $appQuaternaryLight;
+  padding: 20px;
+  @include addPrefix(border-radius, 5px);
+  position: absolute;
+  @include addPrefix(animation, slideIn 1.5s);
+
+  h3 {
+    color: $appQuaternary;
+  }
+}
